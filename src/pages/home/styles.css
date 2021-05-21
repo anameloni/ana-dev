@@ -1,9 +1,156 @@
-.page-header {
-  display: flex;
-
-  background-color:black;
+/* MOBILE LAYOUT */
+body {
+  background: #051D3B;
 }
 
-.top-bar-container {
-  background-color:blue;
+.page-header {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin: 1rem;
+  
+  background: #051D3B;
+  /* background: blue; */
+  
+  width:calc(100% - 32px);
+  height: 3.5rem;
+  box-sizing: border-box; 
+}
+
+.link-logo {
+  position: absolute;
+  left: 0;
+}
+
+.img-logo {
+  margin: 0.68rem 0;
+  left:0;
+  top:0;
+}
+
+.searchForm {
+  display: none;
+}
+
+.searchInput {
+  display: none;
+}
+
+.searchBtn {
+  width: 3rem;
+  height: 3rem;
+  padding: .75rem;
+  margin: .25rem;
+  background: #051D3B;
+  border: none;
+}
+
+.searchBtn img {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+#btn-mobile {
+  width: 3rem;
+  height: 3rem;
+  padding: .75rem;
+  margin: .25rem 0 .25rem .25rem;
+  border: none;
+  background: #051D3B;
+}
+
+.profileImageContainer {
+  display: none;
+}
+
+.profileImage {
+  display: none;
+}
+
+.profileName {
+  display: none;
+}
+
+/* TABLET LAYOUT */
+@media (min-width: 768px) { 
+  .page-header {
+    margin: 2rem;
+    /* width: calc(100% - 4rem); */
+    justify-content: space-between; 
+    /* box-sizing: border-box;   */
+  }
+
+  .link-logo {
+    position: relative;
+  }
+
+  .searchForm {
+    display: block;
+  }
+  
+  .searchInput { 
+    display: block;
+    width: 30rem;
+    height: 3.5rem;
+    background: #FFFFFF29;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  .searchBtn {
+    display: none;
+  }
+  
+  .searchBtn img {
+    display: none;
+  }
+
+  #btn-mobile {
+    width: 3rem;
+    height: 3rem;
+    padding: .75rem;
+    /* margin: .25rem 0 .25rem 2.5rem; */
+    /* background: #051D3B; */
+    border: none;
+  }
+}
+
+@media (min-width: 1100px) {
+  body {
+    background: #051D3B;
+  }
+
+  .searchInput { 
+    display: block;
+    width:47rem;
+    /* margin: 0 2.5rem; */
+  }
+
+  #btn-mobile {
+    display: none;
+  }
+
+  .profileImageContainer {
+    display: flex;    
+    align-items: center;
+  }
+
+  .profileImage {
+    display: block;
+    width: 2rem;
+    height: 2rem;
+    margin: 0.75rem;
+    border-radius: 50%;
+  }
+
+  .profileName {
+    display: flex;    
+    align-items: center;
+    width: 2.625rem;
+    height: 1.5rem;
+    color: #ffffff;
+    font-size: 1.25rem;
+    font-family: sans-serif;
+  }
 }
